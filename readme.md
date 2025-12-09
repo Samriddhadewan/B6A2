@@ -1,6 +1,6 @@
 # Vehicle Rental System
 
-**Live URL:** [https://b6a2-j0l8z9bgc-samriddhas-projects-3b3758d3.vercel.app/](https://b6a2-j0l8z9bgc-samriddhas-projects-3b3758d3.vercel.app/)
+**Live URL:** [https://b6-a2-rosy.vercel.app/](https://b6-a2-rosy.vercel.app/)
 
 ---
 
