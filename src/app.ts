@@ -11,13 +11,13 @@ app.use(express.json());
 
 initDB();
 
-app.use("/v1/users", usersRoutes);
+app.use("/api/v1/users", usersRoutes);
 
-app.use("/v1/vehicles", vehiclesRoutes);
+app.use("/api/v1/vehicles", vehiclesRoutes);
 
-app.use("/v1/auth", authRoutes);
+app.use("/api/v1/auth", authRoutes);
 
-app.use("/v1/bookings", bookingsRoutes);
+app.use("/api/v1/bookings", bookingsRoutes);
 
 
 
