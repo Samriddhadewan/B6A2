@@ -7,14 +7,20 @@ const auth = (...roles: string[]) => {
         try {
             const authHeader = req.headers.authorization;
 
-            if (!authHeader || !authHeader.startsWith("Bearer ")) {
+            if (!authHeader) {
                 return res.status(401).json({
                     success: false,
-                    message: "You are not authorized. Format: Bearer <token>"
+                    message: "You are not authorized. Token missing."
                 });
             }
 
-            const token = authHeader.split(" ")[1];
+            let token;
+
+            if (authHeader.startsWith("Bearer ")) {
+                token = authHeader.split(" ")[1];
+            } else {
+                token = authHeader;
+            }
 
             const decoded = jwt.verify(token, config.jwtSecret as string) as JwtPayload;
             
