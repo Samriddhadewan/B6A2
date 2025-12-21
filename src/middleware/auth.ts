@@ -22,7 +22,7 @@ const auth = (...roles: string[]) => {
                 token = authHeader;
             }
 
-            const decoded = jwt.verify(token, config.jwtSecret as string) as JwtPayload;
+            const decoded = jwt.verify(token!, config.jwtSecret as string) as JwtPayload;
             
             req.user = decoded;
 
